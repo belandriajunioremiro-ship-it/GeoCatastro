@@ -30,14 +30,10 @@ export default function Layout() {
   }
 
   const linkClass = ({ isActive }: { isActive: boolean }) =>
-    `flex items-center gap-3 px-4 py-2.5 text-sm font-medium transition-all border-l-2 ${
-      isActive ? 'border-black bg-gray-50' : 'border-transparent text-gray-600 hover:bg-gray-50'
-    }`
+    isActive ? 'flex items-center gap-3 px-4 py-2.5 text-sm font-medium transition-all border-l-2 border-black bg-gray-50' : 'flex items-center gap-3 px-4 py-2.5 text-sm font-medium transition-all border-l-2 border-transparent text-gray-600 hover:bg-gray-50'
 
   const mobileLinkClass = ({ isActive }: { isActive: boolean }) =>
-    `flex flex-1 flex-col items-center justify-center gap-1 py-2 text-[10px] font-medium transition ${
-      isActive ? 'text-black border-t-2 border-black' : 'text-neutral-500'
-    }`
+    isActive ? 'flex flex-1 flex-col items-center justify-center gap-1 py-2 text-[10px] font-medium transition text-black border-t-2 border-black' : 'flex flex-1 flex-col items-center justify-center gap-1 py-2 text-[10px] font-medium transition text-neutral-500'
 
   return (
     <div className="min-h-screen bg-white flex">

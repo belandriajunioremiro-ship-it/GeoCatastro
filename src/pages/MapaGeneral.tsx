@@ -147,9 +147,7 @@ export default function MapaGeneral() {
             <div className="flex flex-wrap gap-1.5">
               <button
                 onClick={() => setFilterTipo(null)}
-                className={`text-xs px-2.5 py-1 rounded-sm transition ${
-                  filterTipo === null ? 'bg-black text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                }`
+                className={filterTipo === null ? 'text-xs px-2.5 py-1 rounded-sm transition bg-black text-white' : 'text-xs px-2.5 py-1 rounded-sm transition bg-gray-100 text-gray-600 hover:bg-gray-200'}
               >
                 Todos
               </button>
@@ -157,9 +155,7 @@ export default function MapaGeneral() {
                 <button
                   key={tipo}
                   onClick={() => setFilterTipo(filterTipo === tipo ? null : tipo)}
-                  className={`text-xs px-2.5 py-1 rounded-full transition capitalize ${
-                    filterTipo === tipo ? 'text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                  }`}
+                  className={filterTipo === tipo ? 'text-xs px-2.5 py-1 rounded-full transition capitalize text-white' : 'text-xs px-2.5 py-1 rounded-full transition capitalize bg-gray-100 text-gray-600 hover:bg-gray-200'}
                   style={filterTipo === tipo ? { backgroundColor: color } : {}}
                 >
                   {tipoIconos[tipo]} {tipo}
@@ -173,9 +169,7 @@ export default function MapaGeneral() {
                 key={i.id}
                 onClick={() => setSelectedId(i.id)}
                 onDoubleClick={() => navigate(`/ficha/${i.id}`)}
-                className={`w-full text-left px-4 py-3 hover:bg-gray-50 transition ${
-                  selectedId === i.id ? 'bg-gray-100 border-l-4 border-black' : ''
-                }`}
+                className={selectedId === i.id ? 'w-full text-left px-4 py-3 hover:bg-gray-50 transition bg-gray-100 border-l-4 border-black' : 'w-full text-left px-4 py-3 hover:bg-gray-50 transition'}
               >
                 <div className="flex items-start justify-between">
                   <div className="min-w-0">
