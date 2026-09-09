@@ -1,0 +1,37 @@
+{
+  "name": "Catastro Municipal",
+  "short_name": "Catastro",
+  "description": "Gestión predial y levantamiento catastral municipal",
+  "start_url": "/mapa",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "orientation": "any",
+  "categories": ["government", "business", "utilities"],
+  "shortcuts": [
+    {
+      "name": "Mapa Catastral",
+      "short_name": "Mapa",
+      "description": "Ver mapa de predios",
+      "url": "/mapa",
+      "icons": [{ "src": "/icon.svg", "sizes": "any" }]
+    },
+    {
+      "name": "Registrar Inmueble",
+      "short_name": "Registrar",
+      "description": "Registrar nuevo predio",
+      "url": "/registrar",
+      "icons": [{ "src": "/icon.svg", "sizes": "any" }]
+    }
+  ],
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

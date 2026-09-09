@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+html { background: #ffffff; }
+body { margin: 0; min-width: 320px; background: #ffffff; color: #000000; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; -webkit-font-smoothing: antialiased; }
+button, input, select, textarea { font: inherit; }
+button { -webkit-tap-highlight-color: transparent; }
+
+@keyframes pulse {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
+  100% { transform: translate(-50%, -50%) scale(2.5); opacity: 0; }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in { animation: fade-in 0.3s ease-out; }
+.custom-marker, .user-marker, .vertex-marker { background: transparent !important; border: none !important; }
+.leaflet-popup-content-wrapper { border-radius: 0; overflow: hidden; border: 1px solid #000; }
+.leaflet-popup-content { margin: 8px; }
+.leaflet-container { font-family: inherit; }
+
+@media (max-width: 767px) {
+  .leaflet-control-zoom { margin-bottom: 56px !important; }
+  .leaflet-bottom { margin-bottom: 52px; }
+  .leaflet-draw { margin-bottom: 48px !important; }
+}
+
+/* Minimalista blanco y negro */
+.ficha-page { background: #ffffff; color: #000; }
+.ficha-page .ficha-card { background: #fff; border: 1px solid #000; border-radius: 0; box-shadow: none; }
+.ficha-page .ficha-card h2 { color: #000; letter-spacing: 0.05em; font-weight: 600; }
+.ficha-page .ficha-label { color: #666; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; }
+.ficha-page .ficha-value { color: #000; }
+.ficha-page .ficha-rule { border-color: #000; }
+.ficha-page .ficha-metric { background: #f9f9f9; border: 1px solid #e5e5e5; border-radius: 0; }
+.ficha-page .ficha-status { background: #f5f5f5; border: 1px solid #000; color: #000; }
+
+@media (max-width: 767px) {
+  .ficha-page .ficha-card { border-left: 0; border-right: 0; border-radius: 0; }
+}
+
+/* Tarjetas minimalistas */
+.minimal-card {
+  background: #fff;
+  border: 1px solid #000;
+  border-radius: 0;
+  box-shadow: none;
+  transition: all 0.2s ease;
+}
+
+.minimal-card:hover {
+  box-shadow: 4px 4px 0 rgba(0,0,0,0.1);
+}
+
+/* Botones minimalistas */
+.btn-minimal {
+  background: #000;
+  color: #fff;
+  border: 1px solid #000;
+  border-radius: 0;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-minimal:hover {
+  background: #333;
+  border-color: #333;
+}
+
+.btn-minimal:disabled {
+  background: #999;
+  border-color: #999;
+  cursor: not-allowed;
+}
+
+.btn-outline {
+  background: #fff;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 0;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-outline:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* Inputs minimalistas */
+.input-minimal {
+  border: 1px solid #000;
+  border-radius: 0;
+  background: #fff;
+  transition: all 0.2s ease;
+}
+
+.input-minimal:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+}
+
+/* Select minimalista */
+select.input-minimal {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23000'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 1.5em 1.5em;
+  padding-right: 2.5rem;
+}
+
+/* Safe area para móviles modernos */
+@supports (padding: max(0px)) {
+  .safe-area-bottom {
+    padding-bottom: max(16px, env(safe-area-inset-bottom));
+  }
+  .safe-area-top {
+    padding-top: max(16px, env(safe-area-inset-top));
+  }
+}
+
+/* Scrollbar minimalista */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
